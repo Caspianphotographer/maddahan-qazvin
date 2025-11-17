@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نواها | مداحان قزوین</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="main-header">
+    <img src="assets/header.png" class="header-logo">
+    <nav class="top-menu">
+        <a href="index.html">خانه</a>
+        <a href="maddahan.html">مداحان</a>
+        <a href="photos.html">عکس‌ها</a>
+        <a href="videos.html">فیلم‌ها</a>
+    </nav>
+</header>
+
+<section class="page-content">
+    <h1 class="page-title">فهرست نواها</h1>
+
+    <label>مرتب‌سازی: </label>
+    <select id="sortSelect" onchange="sortSounds()">
+        <option value="newest">جدیدترین</option>
+        <option value="oldest">قدیمی‌تر</option>
+    </select>
+
+    <div id="sound-container"></div>
+
+</section>
+
+<footer class="main-footer">
+    <p>پایگاه حفظ و نشر آثار مداحان استان قزوین</p>
+</footer>
+
+<script src="js/sounds.js"></script>
+
+</body>
+</html>
