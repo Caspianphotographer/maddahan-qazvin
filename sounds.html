@@ -28,6 +28,25 @@
         <option value="oldest">قدیمی‌تر</option>
     </select>
 
+    <div class="filters">
+    <input type="text" id="searchBox" onkeyup="searchSounds()" placeholder="جستجو...">
+
+    <select id="filterMaddah" onchange="filterSounds()">
+        <option value="">همه مداحان</option>
+        <option value="حام محمد نبوی">حام محمد نبوی</option>
+        <option value="کربلایی جواد نظری">کربلایی جواد نظری</option>
+        <option value="کربلایی مرتضی سلیمانی">کربلایی مرتضی سلیمانی</option>
+        <option value="کربلایی مهدی نظری">کربلایی مهدی نظری</option>
+    </select>
+
+    <select id="filterMonasebat" onchange="filterSounds()">
+        <option value="">تمام مناسبت‌ها</option>
+        <option value="محرم">محرم</option>
+        <option value="فاطمیه">فاطمیه</option>
+        <option value="رمضان">رمضان</option>
+    </select>
+    </div>
+    
     <div id="sound-container"></div>
 
 </section>
