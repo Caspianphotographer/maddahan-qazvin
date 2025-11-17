@@ -1,0 +1,22 @@
+[
+    {
+        "id": "nabavi",
+        "name": "حام محمد نبوی",
+        "photo": "assets/madahan/nabavi.jpg"
+    },
+    {
+        "id": "javad-nazari",
+        "name": "کربلایی جواد نظری",
+        "photo": "assets/madahan/javad.jpg"
+    },
+    {
+        "id": "morteza-soleimani",
+        "name": "کربلایی مرتضی سلیمانی",
+        "photo": "assets/madahan/morteza.jpg"
+    },
+    {
+        "id": "mahdi-nazari",
+        "name": "کربلایی مهدی نظری",
+        "photo": "assets/madahan/mahdi.jpg"
+    }
+]
