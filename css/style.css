@@ -1,0 +1,94 @@
+/* ===== طراحی کلی ===== */
+body {
+    margin: 0;
+    font-family: 'Tahoma', sans-serif;
+    background: #f8f8f8;
+}
+
+/* ===== هدر ===== */
+.main-header {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.header-logo {
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* حالت دسکتاپ */
+@media (min-width: 768px) {
+    .header-logo {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        margin: 0;
+    }
+    .top-menu {
+        margin-top: 20px;
+    }
+}
+
+/* حالت موبایل: عکس وسط قرار بگیرد */
+@media (max-width: 767px) {
+    .header-logo {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* ===== منو ===== */
+.top-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.top-menu a {
+    text-decoration: none;
+    padding: 8px 14px;
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ===== بخش های صفحه اصلی ===== */
+.home-sections {
+    padding: 20px;
+}
+
+.section-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+}
+
+/* ===== فوتر ===== */
+.main-footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== تغییر رنگ‌ها برای مناسبت‌ها (قابل ویرایش) ===== */
+/* این بخش برای تغییر رنگ مناسبتی است */
+:root {
+    --main-color: #222;
+    --accent-color: #be0000;
+}
+
+/* مثال: اگر خواستیم محرم شود */
+.moharram-theme {
+    --main-color: #000;
+    --accent-color: #b40000;
+}
