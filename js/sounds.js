@@ -1,13 +1,15 @@
 let sounds = [];
+let allSounds = [];
 
 async function loadSounds() {
     const res = await fetch("data/sounds.json");
-    sounds = await res.json();
+    allSounds = await res.json();
+    sounds = [...allSounds];
     renderSounds();
 }
 
 function renderSounds() {
-    let container = document.getElementById("sound-container");
+    const container = document.getElementById("sound-container");
     container.innerHTML = "";
 
     sounds.forEach(s => {
@@ -22,14 +24,26 @@ function renderSounds() {
     });
 }
 
-function sortSounds() {
-    let type = document.getElementById("sortSelect").value;
+function filterSounds() {
+    const selectMaddah = document.getElementById("filterMaddah").value;
+    const selectMona = document.getElementById("filterMonasebat").value;
 
-    if (type === "newest") {
-        sounds.sort((a, b) => new Date(b.date) - new Date(a.date));
-    } else {
-        sounds.sort((a, b) => new Date(a.date) - new Date(b.date));
-    }
+    sounds = allSounds.filter(item => {
+        return (selectMaddah === "" || item.maddah === selectMaddah) &&
+               (selectMona === "" || item.monasebat === selectMona);
+    });
+
+    renderSounds();
+}
+
+function searchSounds() {
+    const txt = document.getElementById("searchBox").value.trim();
+
+    sounds = allSounds.filter(item => 
+        item.title.includes(txt) ||
+        item.maddah.includes(txt) ||
+        item.monasebat.includes(txt)
+    );
 
     renderSounds();
 }
